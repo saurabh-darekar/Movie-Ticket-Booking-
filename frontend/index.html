@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎬 Movie Ticket Booking</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#movies">Movies</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Book Your Favourite Movie</h2>
+        <p>Watch the latest movies on the big screen.</p>
+        <a href="#movies" class="btn">Explore Movies</a>
+    </section>
+
+    <section id="movies">
+        <h2>Now Showing</h2>
+
+        <div class="movie-container">
+
+            <!-- Movie 1 -->
+            <div class="movie-card">
+                <img src="images/avenger.jpg"
+                     alt="Avengers Poster">
+
+                <h3>Avengers: Endgame</h3>
+                <p>Action | Sci-Fi</p>
+                <p><b>Show Time:</b> 9:00 AM</p>
+                <p><b>Total Seats:</b> 100</p>
+
+                <button onclick="bookTicket('Avengers: Endgame', '9:00 AM')">
+                    Book Now
+                </button>
+            </div>
+
+            <!-- Movie 2 -->
+            <div class="movie-card">
+                <img src="images/spiderman.jpg"
+                     alt="Spider-Man Poster">
+
+                <h3>Spider-Man</h3>
+                <p>Action | Adventure</p>
+                <p><b>Show Time:</b> 2:00 PM</p>
+                <p><b>Total Seats:</b> 100</p>
+
+                <button onclick="bookTicket('Spider-Man', '2:00 PM')">
+                    Book Now
+                </button>
+            </div>
+
+            <!-- Movie 3 -->
+            <div class="movie-card">
+                <img src="images/movie3.jpg"
+                     alt="Interstellar Poster">
+
+                <h3>Interstellar</h3>
+                <p>Sci-Fi | Drama</p>
+                <p><b>Show Time:</b> 7:00 PM</p>
+                <p><b>Total Seats:</b> 100</p>
+
+                <button onclick="bookTicket('Interstellar', '7:00 PM')">
+                    Book Now
+                </button>
+            </div>
+
+        </div>
+    </section>
+    
+<!-- Seat Selection Section -->
+<section id="booking" style="display:none;">
+    <h2 id="selectedMovie"></h2>
+    <p id="selectedTime"></p>
+
+    <h3>Select Your Seats</h3>
+
+    <div class="seat-container" id="seatContainer"></div>
+
+    <p id="seatInfo">Selected Seats: None</p>
+
+    <button onclick="confirmBooking()">Confirm Booking</button>
+</section>
+
+    <footer id="contact">
+        <p>© 2026 Movie Ticket Booking System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
